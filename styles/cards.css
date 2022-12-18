@@ -1,0 +1,25 @@
+.card-interest:hover {
+    scale: 1.05;
+}
+
+.card-interest > h2 {
+    font-size: 20px;
+}
+
+.card-interest > img {
+    height: 120px;
+    width: 120px;
+    padding: 2px;
+    margin: 0;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+@media (max-width: 575px) {
+    .card-interest {
+        scale: 0.95;
+    }
+    .card-interest:hover {
+        scale: 1.0;
+    }
+}
