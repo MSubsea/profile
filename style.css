@@ -1,15 +1,23 @@
+@import url("styles/cards.css");
+
 body {
-  background-color: lightgray;
+  background-color: whitesmoke;
   font-family: "PT Sans Narrow";
   color: rgb(43, 43, 43);
-  font-size: 18px;
+  font-size: 10x;
   font-weight: 400;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Oxygen;
   font-weight: 700;
   color: black;
+  font-size: 18px;
+}
+
+p {
+  color: #000;
 }
 
 a {
@@ -20,39 +28,13 @@ a:hover {
   color: rgb(43, 43, 43);
 }
 
-.container {
-  width: 700px;
-  margin: 40px auto;
-}
-
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container {
-    width: 700px;
-  }
-}
-
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
-}
-
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container {
-    width: 300px;
-  }
-}
-
 .card-white {
   background-color: white;
   margin: 20px 0;
   border-radius: 6px;
   padding: 30px;
   border: 1px solid lightgrey;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -64,8 +46,30 @@ a:hover {
   text-align: left;
 }
 
+.img-frame {
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 4px 2px rgba(0, 0, 0, 0.05);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-frame:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 4px 2px rgba(0, 0, 0, 0.2);
+}
+
 .img-circle {
   border-radius: 50%;
+  flex: 0 0;
 }
 
 .list-inline {
@@ -73,7 +77,29 @@ a:hover {
   padding-left: 0px;
 }
 
-.list-inline > li {
+.list-inline>li {
   display: inline-block;
   padding: 0px 20px;
+}
+
+@media (max-width: 575px) {
+
+  h1,
+  h2 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .img-frame {
+    height: 75px;
+    width: 75px;
+  }
+
+  .img-circle {
+    height: 70px;
+    width: 70px;
+  }
 }
